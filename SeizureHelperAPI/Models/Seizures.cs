@@ -1,7 +1,10 @@
-﻿namespace SeizureHelperAPI.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SeizureHelperAPI.Models;
 
 public class Seizures
 {
+    [Key]
     public Guid SeizureEventID { get; set; }
     public required int PatientID { get; set; }
     public required DateTime SeizureDateTime { get; set; }
