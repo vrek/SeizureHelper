@@ -1,16 +1,12 @@
 ﻿using SeizureHelper.ViewModels;
 
-namespace SeizureHelper
+namespace SeizureHelper;
+
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage(MainViewModel vm)
     {
-        int count = 0;
-
-        public MainPage(MainViewModel vm)
-        {
-            InitializeComponent();
-            BindingContext = vm;
-        }
+        InitializeComponent();
+        BindingContext = vm;
     }
-
 }

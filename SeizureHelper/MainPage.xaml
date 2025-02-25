@@ -5,44 +5,64 @@
              xmlns:viewmodel="clr-namespace:SeizureHelper.ViewModels"
              x:DataType="viewmodel:MainViewModel">
 
-    <Grid RowDefinitions="100, Auto, *"
-      ColumnDefinitions="0.75*, 0.25*"
+    <Grid RowDefinitions="100, AUTO, *"
+      ColumnDefinitions="0.25*, 0.25*"
       Padding="10">
         <Image Grid.ColumnSpan="2"
            Source="syringe.png"
            BackgroundColor="White"/>
 
-        <Entry Placeholder="Enter Medication"
-                Text="{Binding Text}"
-               Grid.Row="1"/>
-        
-        <Button Text="Add"
-            Command="{Binding AddCommand}"
-            Grid.Row="1"
-            Grid.Column="2" />
-        <CollectionView Grid.Row="2" Grid.ColumnSpan="2"
-                        ItemsSource="{Binding Items}">
-            
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="{x:Type x:String}">
-                    <SwipeView>
-                        <SwipeView.RightItems>
-                            <SwipeItems>
-                                <SwipeItem Text="Delete"
-                                       BackgroundColor="Red"/>
-                            </SwipeItems>
-                        </SwipeView.RightItems>
-                        <Grid Padding="0,5">
-                            <Border>
-                                <Label Text="{Binding .}"
-                               FontSize="24"/>
-                            </Border>
-                        </Grid>
-                    </SwipeView>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-
+        <Button Text="Login" 
+                Command="{Binding GoToMedicationViewCommand}" 
+                Grid.Row="1" 
+                Grid.Column="0" 
+                WidthRequest="190" 
+                HeightRequest="100" 
+                HorizontalOptions="Start" 
+                VerticalOptions="Center" 
+                BackgroundColor="LightBlue"
+                Padding="10,0,10,0"
+                TextColor="Black"
+                FontSize="18"
+                Opacity="1"/>
+        <Button Text="View Medications" 
+                Command="{Binding GoToMedicationViewCommand}" 
+                Grid.Row="1" 
+                Grid.Column="2" 
+                WidthRequest="190" 
+                HeightRequest="100" 
+                HorizontalOptions="Start" 
+                VerticalOptions="Center" 
+                BackgroundColor="LightBlue"
+                Padding="0,10,0,10"
+                TextColor="Black"
+                FontSize="18"
+                Opacity="1"/>
+        <Button Text="Generate Report" 
+                Command="{Binding GoToMedicationViewCommand}" 
+                Grid.Row="2" 
+                Grid.Column="0" 
+                WidthRequest="190" 
+                HeightRequest="100" 
+                HorizontalOptions="Start" 
+                VerticalOptions="Center" 
+                BackgroundColor="LightBlue"
+                Padding="0,10,0,10"
+                TextColor="Black"
+                FontSize="18"
+                Opacity="1"/>
+        <Button Text="Record Seizure" 
+                Command="{Binding GoToMedicationViewCommand}" 
+                Grid.Row="2" 
+                Grid.Column="2" 
+                WidthRequest="190" 
+                HeightRequest="100" 
+                HorizontalOptions="Start" 
+                VerticalOptions="Center" 
+                BackgroundColor="LightBlue"
+                Padding="0,10,0,10"
+                TextColor="Black"
+                FontSize="18"
+                Opacity="1"/>   
     </Grid>
-
 </ContentPage>

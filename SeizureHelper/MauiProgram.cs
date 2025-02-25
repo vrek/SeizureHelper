@@ -18,6 +18,12 @@ namespace SeizureHelper
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<MainViewModel>();
 
+            builder.Services.AddTransient<MedicationDetail>();
+            builder.Services.AddTransient<MedicationDetailViewModel>();
+
+            builder.Services.AddTransient<MedicationView>();
+            builder.Services.AddTransient<MedicationViewModel>();
+
 #if DEBUG
             builder.Logging.AddDebug();
 #endif

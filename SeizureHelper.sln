@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35507.96 d17.13
+VisualStudioVersion = 17.13.35507.96
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeizureHelper", "SeizureHelper\SeizureHelper.csproj", "{8CAFCAF5-DF22-4D0E-8F2B-043856016836}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeizureHelperV2UI", "SeizureHelperV2UI\SeizureHelperV2UI.csproj", "{67ECA6BE-8FBB-451F-A339-8C47877E274A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeizureHelperAPI", "SeizureHelperAPI\SeizureHelperAPI.csproj", "{41C86F1D-D031-16FA-12ED-1BC7D42CF7D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeizureHelper.AppHost", "SeizureHelper.AppHost\SeizureHelper.AppHost.csproj", "{3371A542-E6A5-4D3E-A770-C23AA4AC33B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeizureHelper.ServiceDefaults", "SeizureHelper.ServiceDefaults\SeizureHelper.ServiceDefaults.csproj", "{37A539EF-B3AD-9DB1-E1D9-2113485DA530}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,17 +17,31 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8CAFCAF5-DF22-4D0E-8F2B-043856016836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8CAFCAF5-DF22-4D0E-8F2B-043856016836}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8CAFCAF5-DF22-4D0E-8F2B-043856016836}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{8CAFCAF5-DF22-4D0E-8F2B-043856016836}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8CAFCAF5-DF22-4D0E-8F2B-043856016836}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8CAFCAF5-DF22-4D0E-8F2B-043856016836}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{67ECA6BE-8FBB-451F-A339-8C47877E274A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67ECA6BE-8FBB-451F-A339-8C47877E274A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67ECA6BE-8FBB-451F-A339-8C47877E274A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{67ECA6BE-8FBB-451F-A339-8C47877E274A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67ECA6BE-8FBB-451F-A339-8C47877E274A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67ECA6BE-8FBB-451F-A339-8C47877E274A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{41C86F1D-D031-16FA-12ED-1BC7D42CF7D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41C86F1D-D031-16FA-12ED-1BC7D42CF7D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41C86F1D-D031-16FA-12ED-1BC7D42CF7D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41C86F1D-D031-16FA-12ED-1BC7D42CF7D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41C86F1D-D031-16FA-12ED-1BC7D42CF7D2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{41C86F1D-D031-16FA-12ED-1BC7D42CF7D2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3371A542-E6A5-4D3E-A770-C23AA4AC33B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3371A542-E6A5-4D3E-A770-C23AA4AC33B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3371A542-E6A5-4D3E-A770-C23AA4AC33B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3371A542-E6A5-4D3E-A770-C23AA4AC33B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37A539EF-B3AD-9DB1-E1D9-2113485DA530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37A539EF-B3AD-9DB1-E1D9-2113485DA530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37A539EF-B3AD-9DB1-E1D9-2113485DA530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37A539EF-B3AD-9DB1-E1D9-2113485DA530}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A8D2EAFB-2630-4E23-BD59-AD4D162480FB}
+		SolutionGuid = {14FCEC55-D32F-4902-BD5B-CC4BB6352B73}
 	EndGlobalSection
 EndGlobal

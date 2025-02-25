@@ -1,0 +1,6 @@
+@SeizureHelperAPI_HostAddress = http://localhost:5112
+
+GET {{SeizureHelperAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SeizureHelperV2UI.Pages.Home"
+             Title="Home">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to Seizure Helper!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button
+                x:Name="EditMedication"
+                Text="Edit Medication"
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="20"
+                Clicked="EditMedication_Clicked"/>
+            <Button
+                x:Name="ReportSeizure"
+                Text="Report Seizure"
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="20"
+                Clicked="ReportSeizure_Clicked"/>
+            <Button
+                x:Name="Medication"
+                Text="Medication"
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="20"
+                Clicked="Medication_Clicked"/>
+            <Button
+                x:Name="Login"
+                Text="Login"
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="20"
+                Clicked="Login_Clicked"/>
+            <Button
+                x:Name="Settings"
+                Text="Settings"
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="20"
+                Clicked="Settings_Clicked"/>
+        </Grid>
+       
+    </VerticalStackLayout>
+</ContentPage>

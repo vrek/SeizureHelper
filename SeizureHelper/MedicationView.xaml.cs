@@ -2,9 +2,9 @@ using SeizureHelper.ViewModels;
 
 namespace SeizureHelper;
 
-public partial class MedicationDetail : ContentPage
+public partial class MedicationView : ContentPage
 {
-    public MedicationDetail(MedicationDetailViewModel vm)
+    public MedicationView(MedicationViewModel vm)
     {
         InitializeComponent();
         BindingContext = vm;
