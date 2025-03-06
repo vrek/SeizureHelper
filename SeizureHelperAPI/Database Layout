@@ -1,0 +1,72 @@
+classDiagram
+direction BT
+class AdministrationHistories {
+   text DosageId
+   text DateTime
+   text PrescriptionsPrescriptionId
+   text AdministrationID
+}
+class CareGivers {
+   text FirstName
+   text LastName
+   text DateOfBirth
+   text Email
+   text PatientID
+   text PatientID1
+   text CareGiverID
+}
+class Dosages {
+   text PrescriptionId
+   real DosageAmount
+   text DosageTime
+   text DosageId
+}
+class Medication {
+   text MedicationName
+   text MedicationGenericName
+   text MedicationId
+}
+class Patients {
+   text FirstName
+   text LastName
+   text DateOfBirth
+   text PatientID
+}
+class Prescriptions {
+   text StartDate
+   text EndDate
+   text PatientID
+   text MedicineMedicationId
+   text PrescriptionId
+}
+class Seizures {
+   text SeizureDateTime
+   integer SeizureSeverity
+   real SeizueDurationMinutes
+   text SeizureComments
+   text PatientID
+   text SeizureEventID
+}
+class __EFMigrationsHistory {
+   text ProductVersion
+   text MigrationId
+}
+class __EFMigrationsLock {
+   text Timestamp
+   integer Id
+}
+class sqlite_master {
+   text type
+   text name
+   text tbl_name
+   int rootpage
+   text sql
+}
+
+AdministrationHistories  -->  Dosages : DosageId
+AdministrationHistories  -->  Prescriptions : PrescriptionsPrescriptionId:PrescriptionId
+CareGivers  -->  Patients : PatientID1:PatientID
+Dosages  -->  Prescriptions : PrescriptionId
+Prescriptions  -->  Medication : MedicineMedicationId:MedicationId
+Prescriptions  -->  Patients : PatientID
+Seizures  -->  Patients : PatientID
