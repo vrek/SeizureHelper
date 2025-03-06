@@ -1,5 +1,6 @@
 
 using SeizureHelper.ServiceDefaults;
+using SeizureHelperAPI.Contexts;
 
 namespace SeizureHelperAPI;
 
@@ -11,8 +12,12 @@ public class Program
         _ = builder.AddServiceDefaults();
 
         // Add services to the container.
+        
 
         _ = builder.Services.AddControllers();
+        _ = builder.Services.AddDbContext<IDbContext, LocalDbContext>();
+        _ = builder.Services.AddDbContext<IDbContext, RemoteDbContext>();
+        
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         _ = builder.Services.AddEndpointsApiExplorer();
         _ = builder.Services.AddSwaggerGen();
@@ -37,4 +42,5 @@ public class Program
 
         app.Run();
     }
+    
 }

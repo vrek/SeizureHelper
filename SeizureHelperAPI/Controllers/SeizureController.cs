@@ -1,41 +1,45 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using SeizureHelperAPI.Contexts;
+using SeizureHelperAPI.Models;
 
 namespace SeizureHelperAPI.Controllers;
 [Route("api/[controller]")]
 [ApiController]
 public class SeizureController : ControllerBase
 {
-    // GET: api/<ValuesController>
-    [HttpGet]
-    public IEnumerable<string> Get()
+    
+    private readonly IDbContext _context;
+
+    public SeizureController(IDbContext context)
     {
-        return new string[] { "value1", "value2" };
+        _context = context;
     }
 
-    // GET api/<ValuesController>/5
-    [HttpGet("{id}")]
-    public string Get(int id)
-    {
-        return "value";
-    }
-
-    // POST api/<ValuesController>
+    // POST: api/SeizureEvents
     [HttpPost]
-    public void Post([FromBody] string value)
+    public async Task<ActionResult<Seizures>> PostSeizureEvent([FromBody] Seizures seizureEvent)
     {
-    }
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
 
-    // PUT api/<ValuesController>/5
-    [HttpPut("{id}")]
-    public void Put(int id, [FromBody] string value)
-    {
-    }
+        _context.Seizures.Add(seizureEvent);
+        await _context.SaveChangesAsync();
 
-    // DELETE api/<ValuesController>/5
-    [HttpDelete("{id}")]
-    public void Delete(int id)
+        return CreatedAtAction(nameof(GetSeizureEvent), new { id = seizureEvent.SeizureEventID }, seizureEvent);
+    }
+// GET: api/SeizureEvents/5
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Seizures>> GetSeizureEvent(Guid id)
     {
+        var _seizureEvent = await _context.Seizures.FindAsync(id);
+
+        if (_seizureEvent == null)
+        {
+            return NotFound();
+        }
+
+        return _seizureEvent;
     }
 }
